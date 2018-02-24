@@ -58,7 +58,7 @@ public class MyArrayListWithBugsTest {
             instance.add(o);
         }
         Object expResult = o;
-        Object result = instance.get(instance.size() - 1);
+        Object result = instance.get(instance.size() -1);
         assertEquals(expResult, result);
     }
 
@@ -69,9 +69,10 @@ public class MyArrayListWithBugsTest {
     public void testAdd_int_Object() {
         System.out.println("add int object");
         int index = 0;
-        Object o = null;
+        Object o = new Object();
         MyArrayListWithBugs instance = new MyArrayListWithBugs();
         instance.add(index, o);
+        assertEquals(instance.get(instance.size()), o);
     }
 
     /**
