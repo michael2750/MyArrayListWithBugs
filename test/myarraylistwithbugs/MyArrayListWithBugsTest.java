@@ -7,7 +7,6 @@ package myarraylistwithbugs;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.omg.CORBA.portable.IndirectionException;
 
 /**
  *
@@ -88,6 +87,9 @@ public class MyArrayListWithBugsTest {
         assertEquals(expResult, result);
     }
     
+    /**
+     * 
+     */
     @Test (expected = IndexOutOfBoundsException.class)
     public void testRemoveOnEmptyList(){
         System.out.println("remove object on empty list");
@@ -95,6 +97,9 @@ public class MyArrayListWithBugsTest {
         instance.remove(2);
     }
 
+    /**
+     * 
+     */
     @Test (expected = IndexOutOfBoundsException.class)
     public void testGetOutOfBounds(){
         System.out.println("Get object on index out of bounds");
@@ -104,6 +109,9 @@ public class MyArrayListWithBugsTest {
         instance.get(2);
     }
     
+    /**
+     * 
+     */
     @Test (expected = IndexOutOfBoundsException.class)
     public void testAddOutOfBounds(){
         System.out.println("Add object on index out of bounds");
